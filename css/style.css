@@ -1,0 +1,102 @@
+@import url(botones.css);
+@import url(perfil.css);
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+	background: #008CFF;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 98vh;
+	cursor: pointer;
+}
+.sec{
+    background: #008CFF;
+    background-image: url(../img/he.png);
+	height: 540px;
+    width: 80%;
+    position: absolute;
+	background-size: cover;
+	background-repeat: no-repeat;
+    cursor: pointer;
+	border-radius: 10px;
+    box-shadow: 0 0 10px blue;
+    z-index: 2;
+}
+.contenedor{
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    animation:animar 4s linear infinite;
+}
+.fila{
+    display: inline-flex;
+    margin-left: -50px;
+    margin-top: -32px;
+    overflow: hidden;
+}
+.fila:nth-child(even){
+    margin-left: 1px;
+}
+.hexagono{
+    color: blue;  
+    position: relative;
+    height: 110px;
+    width: 100px;
+    margin: 1px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: 2s;
+}
+.hexagono::before{
+    top: 0;
+    left: 0;
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+.hexagono:hover{
+    background-color: white;
+    transition: 0s;
+}
+.imgI{
+    float: left;
+    width: 20%;
+    height: 40%;
+    margin: 20px;
+    animation: flotar 2s infinite ease-in-out alternate;
+}
+.imgD{
+    float: right;
+    width: 20%;
+    height: 20%;
+
+}
+.texto3d{
+    margin: 20px;
+	float: right;
+    font-size:3em;
+    color:#eee;
+    text-shadow:1px 1px #222,2px 2px #222,3px 3px #222,4px 4px #111,5px 5px #111,6px 6px #111,
+    7px 7px #111,8px 8px #111,9px 9px #111,10px 10px #111,11px 11px #111,12px 12px #111,
+    13px 13px #111,14px 14px #111,15px 15px #111,16px 16px #111,17px 17px #111;
+}
+@keyframes animar{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+@keyframes flotar{
+    0%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}

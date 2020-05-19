@@ -1,0 +1,26 @@
+.boton{
+	background: white;
+	border-bottom: 5px solid gray;
+	border-radius: 12px;
+	box-shadow: 3px 3px 3px #999;
+	color: black;
+	display: flex;  
+	font-family: 'Ceviche One', cursive;
+	font-size: 20px;
+	height: 5px;
+	margin: 80px auto;
+	padding: 15px 15px;
+  text-align: center;
+  align-items: center;
+	transition: all 0.2s ease 0s;
+	width: 170px;
+  }
+  .boton:hover{
+	  background: #008CFF;
+  }
+  .boton:active {
+	box-shadow: 1px 1px 1px #777, 0px 0px 35px 0px #008CFF;
+	border-bottom:0.5px solid #008CFF;
+	text-shadow:  0px 0px 5px #008CFF, 0px 0px 5px #008CFF;
+	transform: translateY(4px);
+  }
